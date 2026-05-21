@@ -259,6 +259,14 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.setProperty('--mouse-y', y + '%');
       });
     });
+
+    // "En savoir plus" / "اعرف المزيد" → scroll to contact
+    servicesGrid.querySelectorAll('.service-arrow').forEach(arrow => {
+      arrow.style.cursor = 'pointer';
+      arrow.addEventListener('click', () => {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   }
 
   /* ─────────── CONTACT FORM ─────────── */
@@ -269,23 +277,40 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Simulate submission
       const isArabic = document.documentElement.lang === 'ar';
       const sendingText = isArabic ? 'جارٍ الإرسال...' : 'Envoi en cours...';
+      const successText = isArabic ? 'تم إرسال رسالتكم بنجاح!' : 'Message envoyé avec succès !';
+      const errorText = isArabic ? 'حدث خطأ، يرجى المحاولة لاحقاً.' : 'Erreur, veuillez réessayer.';
       const btn = contactForm.querySelector('.btn');
       const originalHTML = btn.innerHTML;
       btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> ' + sendingText;
       btn.disabled = true;
 
-      setTimeout(() => {
+      const formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
         btn.innerHTML = originalHTML;
         btn.disabled = false;
-        contactForm.reset();
-
-        // Show toast
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3500);
-      }, 1500);
+        if (response.ok) {
+          contactForm.reset();
+          const toastMsg = document.getElementById('toast-message');
+          if (toastMsg) toastMsg.textContent = successText;
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 3500);
+        } else {
+          alert(errorText);
+        }
+      })
+      .catch(() => {
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+        alert(errorText);
+      });
     });
   }
 

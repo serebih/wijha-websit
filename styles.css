@@ -1221,21 +1221,25 @@ button { cursor: pointer; font-family: inherit; }
 
 .contact-socials {
   display: flex;
+  flex-wrap: wrap;
   gap: .8rem;
   margin-top: 2rem;
 }
 
 .social-link {
-  width: 44px;
+  width: auto;
+  padding: 0 1.2rem;
   height: 44px;
   background: var(--bg-card);
   border: var(--border-subtle);
-  border-radius: var(--radius-sm);
+  border-radius: 60px;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   justify-content: center;
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   transition: all .35s var(--ease-out);
 }
 
