@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>وجهة — هندسة وحلول رقمية</title>
+  <meta name="description" content="وجهة هي نخبة من المهندسين الموريتانيين تقدم خدمات تطوير الويب، تطبيقات الهاتف المحمول، حلول الذكاء الاصطناعي، والأنظمة المدمجة." />
+  <meta name="keywords" content="هندسة, تطوير الويب, تطبيق موبايل, الذكاء الاصطناعي, أنظمة مدمجة, وجهة, موريتانيا" />
+  <meta name="author" content="Wijha" />
+  <meta property="og:title" content="وجهة — هندسة وحلول رقمية" />
+  <meta property="og:description" content="شريكك في الهندسة الرقمية. مواقع الويب، تطبيقات الهاتف، الذكاء الاصطناعي والمزيد." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/logo-clean.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader">
+    <img src="assets/logo-clean.png" alt="Wijha" class="loader-logo" />
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- ========== CURSOR GLOW ========== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#accueil" class="nav-brand" id="nav-brand">
+        <img src="assets/logo-clean.png" alt="Wijha Logo" />
+        <span>وجهة</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil" class="active" data-nav>الرئيسية</a>
+        <a href="#apropos" data-nav>من نحن</a>
+        <a href="#services" data-nav>خدماتنا</a>
+        <a href="#portfolio" data-nav>أعمالنا</a>
+        <a href="#contact" data-nav>اتصل بنا</a>
+        <a href="#contact" class="btn btn-primary nav-cta" id="nav-cta-btn">
+          ابدأ مشروعاً
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+        </a>
+        <a href="index.html" class="lang-switch">Français</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg">
+      <img src="assets/hero-bg.png" alt="" />
+    </div>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          نخبة من المهندسين الموريتانيين
+        </div>
+
+        <h1>
+          <span class="line">نُحوّل أفكارك</span>
+          <span class="line">إلى</span>
+          <span class="line gradient-text">حلول تقنية رائدة.</span>
+        </h1>
+
+        <p class="hero-desc">
+          تضم "وجهة" نخبة من المهندسين الشغوفين ومتعددي التخصصات، نعمل معاً لتصميم حلول تقنية مخصصة تدفع بشركتكم نحو آفاق المستقبل.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary" id="hero-cta-btn">
+            اتصل بنا
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </a>
+          <a href="#services" class="btn btn-outline" id="hero-services-btn">
+            خدماتنا
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-count="50">+0</div>
+            <div class="stat-text">مشروع منجز</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="8">+0</div>
+            <div class="stat-text">مجالات التخصص</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="100">%0</div>
+            <div class="stat-text">نسبة رضا العملاء</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-orbit">
+          <div class="orbit-ring"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring"><div class="orbit-dot"></div></div>
+          <div class="orbit-center">
+            <img src="assets/logo-clean.png" alt="Wijha" />
+          </div>
+          <!-- Floating icons -->
+          <div class="orbit-icon">🌐</div>
+          <div class="orbit-icon">🤖</div>
+          <div class="orbit-icon">📱</div>
+          <div class="orbit-icon">⚙️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="apropos">
+    <div class="container">
+      <div class="about-image-wrapper reveal-left">
+        <div class="about-image">
+          <img src="assets/team.png" alt="فريق وجهة" />
+        </div>
+        <div class="about-floating-card">
+          <div class="afc-icon">🚀</div>
+          <div class="afc-text">
+            <strong>+5 سنوات</strong>
+            <span>من الخبرة المشتركة</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <span class="section-label">من نحن</span>
+        <h2 class="section-title">
+          نخبة من المهندسين <span class="highlight">الشغوفين</span> ومتعددي التخصصات
+        </h2>
+        <p class="section-subtitle">
+          في <strong>وجهة</strong> (Wijha)، نحن نخبة من المهندسين الموريتانيين المتخصصين في مجالات تكنولوجية مختلفة. مهمتنا هي تقديم حلول مبتكرة ومخصصة تلبي أصعب التحديات التي تواجه عملائنا.
+        </p>
+        <p class="section-subtitle" style="margin-top:.8rem;">
+          يضمن لنا نهجنا متعدد التخصصات الإحاطة الشاملة بدورة حياة المشاريع؛ انطلاقاً من مرحلة التصميم، مروراً بالتطوير والاختبار، وصولاً إلى الإطلاق والنشر.
+        </p>
+
+        <div class="about-features">
+          <div class="about-feature reveal reveal-delay-1">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>خبرات متكاملة</h4>
+              <p>تطوير الويب، الهواتف، الذكاء الاصطناعي، والأنظمة المدمجة</p>
+            </div>
+          </div>
+          <div class="about-feature reveal reveal-delay-2">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>دقة في المواعيد</h4>
+              <p>التزام تام بالآجال والميزانيات المحددة</p>
+            </div>
+          </div>
+          <div class="about-feature reveal reveal-delay-3">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>منهجية تشاركية</h4>
+              <p>العمل جنباً إلى جنب مع عملائنا</p>
+            </div>
+          </div>
+          <div class="about-feature reveal reveal-delay-4">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>جودة استثنائية</h4>
+              <p>وفقاً لأعلى المعايير العالمية</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-label">خدماتنا</span>
+        <h2 class="section-title">حلول تقنية <span class="highlight">مخصصة</span> تُلبي كافة تطلعاتكم</h2>
+        <p class="section-subtitle">
+          نرافق عملاءنا في كل خطوة من رحلة تحولهم الرقمي، عبر تقديم باقة متكاملة من الخدمات الهندسية الرائدة.
+        </p>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <div class="service-card reveal reveal-delay-1" id="service-web">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>تطوير الويب</h3>
+          <p>تصميم مواقع مؤسسية، منصات تجارة إلكترونية، وتطبيقات ويب عالية الأداء معتمدين على أحدث التقنيات.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2" id="service-app">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>تطبيقات الهواتف الذكية</h3>
+          <p>تطوير تطبيقات أصيلة (Native) ومتعددة المنصات لنظامي iOS وAndroid، تتميز بسلاسة الاستخدام والكفاءة العالية.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3" id="service-ia">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1.27A7 7 0 0 1 14 22h-4a7 7 0 0 1-6.73-3H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><path d="M10 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/><path d="M14 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+          </div>
+          <h3>حلول الذكاء الاصطناعي</h3>
+          <p>توظيف تقنيات الذكاء الاصطناعي، وتعلم الآلة، والنماذج التنبؤية لأتمتة العمليات والارتقاء بأدائها.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-4" id="service-embedded">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3>الأنظمة المدمجة</h3>
+          <p>هندسة أنظمة مدمجة متطورة، برمجيات ثابتة (Firmware)، وحلول إنترنت الأشياء (IoT) مخصصة للقطاع الصناعي.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-5" id="service-data">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>تحليل البيانات</h3>
+          <p>جمع البيانات، معالجتها، وعرضها بصرياً لاستخلاص رؤى استراتيجية تدعم اتخاذ قرارات مبنية على أسس متينة.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-6" id="service-cahier">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>دفاتر الشروط</h3>
+          <p>إعداد دفاتر شروط فنية دقيقة، ومواصفات وظيفية مفصلة، إلى جانب صياغة وثائق المشاريع باحترافية.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1" id="service-systems">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>هندسة النظم</h3>
+          <p>تصميم البنى التحتية، التكامل النظمي، تحسين الأداء، وبناء بيئات تقنية قابلة للتوسع.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2" id="service-desktop">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>تطبيقات سطح المكتب</h3>
+          <p>تطوير برمجيات مكتبية قوية وسهلة الاستخدام لأنظمة Windows وmacOS وLinux، مُصممة خصيصاً لتلبية متطلباتكم.</p>
+          <div class="service-arrow">
+            اعرف المزيد
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== PORTFOLIO ========== -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-label">أعمالنا</span>
+        <h2 class="section-title">نماذج من <span class="highlight">إنجازاتنا</span></h2>
+        <p class="section-subtitle">
+          ندعوكم لاستكشاف نخبة من مشاريعنا الرائدة التي تعكس مدى خبرتنا وقدرتنا على ابتكار حلول تقنية عالية الجودة.
+        </p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="portfolio-filters reveal">
+        <button class="pf-filter active" data-filter="all">الكل</button>
+        <button class="pf-filter" data-filter="ia">ذكاء اصطناعي وأنظمة مدمجة</button>
+        <button class="pf-filter" data-filter="mobile">موبايل</button>
+        <button class="pf-filter" data-filter="web">ويب</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- Project 1 — Bassira -->
+        <div class="portfolio-card reveal reveal-delay-1" data-category="ia" id="project-bassira">
+          <div class="portfolio-image">
+            <img src="assets/bassira.png?v=2" alt="بصيرة — نظام مراقبة ذكي" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-category-badge">الذكاء الاصطناعي المدمج</span>
+                <h3>بصيرة</h3>
+                <p>نظام مراقبة ذكي يعتمد على الذكاء الاصطناعي المدمج</p>
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('bassira')">
+                  عرض المشروع
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="ptag">الذكاء الاصطناعي</span>
+              <span class="ptag">أنظمة مدمجة</span>
+              <span class="ptag">أمن</span>
+            </div>
+            <h3>بصيرة</h3>
+            <p>نظام مراقبة متطور يكتشف محاولات التسلل والسرقة، ويُرسل تنبيهات فورية بالاعتماد على خوارزميات الذكاء الاصطناعي المدمج.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 — Tijarti -->
+        <div class="portfolio-card reveal reveal-delay-2" data-category="mobile" id="project-tijarti">
+          <div class="portfolio-image">
+            <img src="assets/tijarti.png?v=2" alt="تجارتي — تطبيق موبايل ERP" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-category-badge">تطبيق موبايل</span>
+                <h3>تجارتي</h3>
+                <p>تطبيق متكامل لتخطيط موارد المؤسسات (ERP)</p>
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('tijarti')">
+                  عرض المشروع
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="ptag">موبايل</span>
+              <span class="ptag">تخطيط موارد المؤسسات ERP</span>
+              <span class="ptag">إدارة</span>
+            </div>
+            <h3>تجارتي</h3>
+            <p>نظام شامل لإدارة العمليات التجارية: المبيعات، المخزون، الفواتير، وتقديم تحليلات فورية.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 — Sites Web -->
+        <div class="portfolio-card reveal reveal-delay-3" data-category="web" id="project-websites">
+          <div class="portfolio-image">
+            <img src="assets/websites.png" alt="مواقع ويب تم تصميمها بواسطة وجهة" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-category-badge">تطوير الويب</span>
+                <h3>مواقع الويب</h3>
+                <p>مجموعة من المواقع والمنصات الرقمية الحديثة وعالية الأداء</p>
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('websites')">
+                  عرض المشروع
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="ptag">تصميم الويب</span>
+              <span class="ptag">تجارة إلكترونية</span>
+              <span class="ptag">شركات</span>
+            </div>
+            <h3>مواقع ويب منجزة</h3>
+            <p>تطوير بوابات رقمية، منصات للتجارة الإلكترونية، وتطبيقات ويب مخصصة تخدم مختلف القطاعات الحيوية.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="project-modal" id="projectModal">
+    <div class="project-modal-backdrop" onclick="closeProjectModal()"></div>
+    <div class="project-modal-content">
+      <button class="project-modal-close" onclick="closeProjectModal()" aria-label="إغلاق">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="project-modal-image" id="modalImage"></div>
+      <div class="project-modal-body">
+        <span class="portfolio-category-badge" id="modalBadge"></span>
+        <h2 id="modalTitle"></h2>
+        <p class="project-modal-desc" id="modalDesc"></p>
+        <div class="project-modal-details">
+          <div class="pmd-item">
+            <h4>التقنيات</h4>
+            <div class="pmd-tags" id="modalTechs"></div>
+          </div>
+          <div class="pmd-item">
+            <h4>الميزات</h4>
+            <ul id="modalFeatures"></ul>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary" onclick="closeProjectModal()" style="margin-top:1.5rem">
+          ابدأ مشروعاً مشابهاً
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 5-7 7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="glow-line" />
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-info reveal-left">
+        <span class="section-label">اتصل بنا</span>
+        <h2 class="section-title">لنتحدث عن مشروعكم <span class="highlight">القادم</span></h2>
+        <p class="section-subtitle">
+          سواءً كانت لديكم فكرة طموحة، احتياج تقني، أو مشروع قيد التخطيط؛ لا تترددوا في التواصل معنا لمناقشة الحلول الأمثل لكم.
+        </p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="cc-content">
+              <h4>البريد الإلكتروني</h4>
+              <p>contact@wijha.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="cc-content">
+              <h4>الهاتف</h4>
+              <p>+222 XX XX XX XX</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="cc-content">
+              <h4>العنوان</h4>
+              <p>موريتانيا</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" class="social-link" id="social-linkedin" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" id="social-github" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-link" id="social-twitter" aria-label="X / Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" id="social-instagram" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper reveal-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">الاسم الأول</label>
+              <input type="text" id="firstName" name="firstName" placeholder="اسمك الأول" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">اسم العائلة</label>
+              <input type="text" id="lastName" name="lastName" placeholder="اسم العائلة" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">الهاتف</label>
+              <input type="tel" id="phone" name="phone" placeholder="+222 XX XX XX XX" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">الخدمة المطلوبة</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>يرجى تحديد الخدمة</option>
+              <option value="web">تطوير الويب</option>
+              <option value="mobile">تطبيقات الهاتف المحمول</option>
+              <option value="ia">حلول الذكاء الاصطناعي</option>
+              <option value="embedded">الأنظمة المدمجة</option>
+              <option value="data">تحليل البيانات</option>
+              <option value="cahier">دفاتر الشروط</option>
+              <option value="systems">هندسة النظم</option>
+              <option value="desktop">تطبيقات سطح المكتب</option>
+              <option value="other">أخرى</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">الرسالة</label>
+            <textarea id="message" name="message" placeholder="يُرجى تقديم وصف موجز لمشروعكم أو متطلباتكم..." required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              إرسال الرسالة
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#accueil" class="nav-brand">
+            <img src="assets/logo-clean.png" alt="Wijha" style="height:38px" />
+            <span>وجهة</span>
+          </a>
+          <p>
+            نخبة من المهندسين الموريتانيين الشغوفين، نأخذ على عاتقنا تحويل أفكاركم إلى حلول تقنية رائدة تتميز بالابتكار والكفاءة.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#accueil">الرئيسية</a></li>
+            <li><a href="#apropos">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#portfolio">أعمالنا</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>الخدمات</h4>
+          <ul>
+            <li><a href="#services">تطوير الويب</a></li>
+            <li><a href="#services">تطبيقات الهواتف الذكية</a></li>
+            <li><a href="#services">الذكاء الاصطناعي</a></li>
+            <li><a href="#services">الأنظمة المدمجة</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>اتصل بنا</h4>
+          <ul>
+            <li><a href="mailto:contact@wijha.com">contact@wijha.com</a></li>
+            <li><a href="tel:+222XXXXXXXX">+222 XX XX XX XX</a></li>
+            <li><a href="#">موريتانيا</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 وجهة (Wijha). جميع الحقوق محفوظة.</p>
+        <div class="footer-bottom-links">
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">الشروط القانونية</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ========== TOAST ========== -->
+  <div class="toast" id="toast">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toast-message">تم إرسال رسالتكم بنجاح!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

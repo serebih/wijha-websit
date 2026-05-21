@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wijha — Ingénierie & Solutions Digitales</title>
+  <meta name="description" content="Wijha est un groupe d'ingénieurs experts proposant des services de développement web, applications mobiles, solutions IA, systèmes embarqués et plus encore." />
+  <meta name="keywords" content="ingénierie, développement web, application mobile, intelligence artificielle, systèmes embarqués, Wijha" />
+  <meta name="author" content="Wijha" />
+  <meta property="og:title" content="Wijha — Ingénierie & Solutions Digitales" />
+  <meta property="og:description" content="Votre partenaire d'ingénierie digitale. Sites web, apps mobiles, IA et plus." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/logo-clean.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader">
+    <img src="assets/logo-clean.png" alt="Wijha" class="loader-logo" />
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- ========== CURSOR GLOW ========== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#accueil" class="nav-brand" id="nav-brand">
+        <img src="assets/logo-clean.png" alt="Wijha Logo" />
+        <span>Wijha</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil" class="active" data-nav>Accueil</a>
+        <a href="#apropos" data-nav>À propos</a>
+        <a href="#services" data-nav>Services</a>
+        <a href="#portfolio" data-nav>Portfolio</a>
+        <a href="#contact" data-nav>Contact</a>
+        <a href="#contact" class="btn btn-primary nav-cta" id="nav-cta-btn">
+          Démarrer un projet
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="index-ar.html" class="lang-switch">العربية</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg">
+      <img src="assets/hero-bg.png" alt="" />
+    </div>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Groupe d'ingénieurs mauritaniens
+        </div>
+
+        <h1>
+          <span class="line">Nous transformons</span>
+          <span class="line">vos idées en</span>
+          <span class="line gradient-text">solutions digitales.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Wijha rassemble des ingénieurs passionnés et multidisciplinaires pour concevoir 
+          des solutions technologiques sur mesure qui propulsent votre entreprise vers le futur.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary" id="hero-cta-btn">
+            Contactez-nous
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#services" class="btn btn-outline" id="hero-services-btn">
+            Nos services
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-count="50">0+</div>
+            <div class="stat-text">Projets livrés</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="8">0+</div>
+            <div class="stat-text">Domaines d'expertise</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="100">0%</div>
+            <div class="stat-text">Satisfaction client</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-orbit">
+          <div class="orbit-ring"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring"><div class="orbit-dot"></div></div>
+          <div class="orbit-center">
+            <img src="assets/logo-clean.png" alt="Wijha" />
+          </div>
+          <!-- Floating icons -->
+          <div class="orbit-icon">🌐</div>
+          <div class="orbit-icon">🤖</div>
+          <div class="orbit-icon">📱</div>
+          <div class="orbit-icon">⚙️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="apropos">
+    <div class="container">
+      <div class="about-image-wrapper reveal-left">
+        <div class="about-image">
+          <img src="assets/team.png" alt="Équipe Wijha" />
+        </div>
+        <div class="about-floating-card">
+          <div class="afc-icon">🚀</div>
+          <div class="afc-text">
+            <strong>+5 ans</strong>
+            <span>d'expérience combinée</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <span class="section-label">À propos</span>
+        <h2 class="section-title">
+          Un groupe d'ingénieurs <span class="highlight">passionnés</span> et multidisciplinaires
+        </h2>
+        <p class="section-subtitle">
+          Chez <strong>Wijha</strong>, nous sommes un collectif d'ingénieurs mauritaniens spécialisés 
+          dans différents domaines technologiques. Notre mission est de fournir des solutions 
+          innovantes et personnalisées qui répondent aux défis les plus complexes de nos clients.
+        </p>
+        <p class="section-subtitle" style="margin-top:.8rem;">
+          Notre approche pluridisciplinaire nous permet de couvrir l'intégralité du cycle de vie 
+          d'un projet, de la conception au déploiement, en passant par le développement et les tests.
+        </p>
+
+        <div class="about-features">
+          <div class="about-feature reveal reveal-delay-1">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>Expertise diversifiée</h4>
+              <p>Web, Mobile, IA, Embarqué</p>
+            </div>
+          </div>
+          <div class="about-feature reveal reveal-delay-2">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>Livraison à temps</h4>
+              <p>Respect des délais et budgets</p>
+            </div>
+          </div>
+          <div class="about-feature reveal reveal-delay-3">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>Approche collaborative</h4>
+              <p>Travail en synergie avec le client</p>
+            </div>
+          </div>
+          <div class="about-feature reveal reveal-delay-4">
+            <div class="af-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="af-text">
+              <h4>Qualité premium</h4>
+              <p>Standards internationaux</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-label">Nos services</span>
+        <h2 class="section-title">Des solutions <span class="highlight">sur mesure</span> pour chaque besoin</h2>
+        <p class="section-subtitle">
+          Nous accompagnons nos clients à chaque étape de leur transformation digitale 
+          avec un portefeuille complet de services d'ingénierie.
+        </p>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+
+        <!-- Card 1 -->
+        <div class="service-card reveal reveal-delay-1" id="service-web">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Développement Web</h3>
+          <p>Sites vitrines, e-commerce et applications web performantes avec les technologies les plus récentes.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card reveal reveal-delay-2" id="service-app">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>Applications Mobiles</h3>
+          <p>Applications iOS et Android natives et cross-platform, ergonomiques et performantes.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card reveal reveal-delay-3" id="service-ia">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1.27A7 7 0 0 1 14 22h-4a7 7 0 0 1-6.73-3H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><path d="M10 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/><path d="M14 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+          </div>
+          <h3>Solutions IA</h3>
+          <p>Intelligence artificielle, machine learning et modèles prédictifs pour automatiser et optimiser vos processus.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card reveal reveal-delay-4" id="service-embedded">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3>Systèmes Embarqués</h3>
+          <p>Conception de systèmes embarqués robustes, firmware et IoT pour des applications industrielles et grand public.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card reveal reveal-delay-5" id="service-data">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Analyse de Données</h3>
+          <p>Collecte, traitement et visualisation de données pour des insights stratégiques et des décisions éclairées.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card reveal reveal-delay-6" id="service-cahier">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Cahier des Charges</h3>
+          <p>Rédaction de cahiers des charges techniques détaillés, spécifications fonctionnelles et documentation projet.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="service-card reveal reveal-delay-1" id="service-systems">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Ingénierie Systèmes</h3>
+          <p>Architecture système, intégration, optimisation des performances et mise en place d'infrastructures scalables.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="service-card reveal reveal-delay-2" id="service-desktop">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Applications Desktop</h3>
+          <p>Applications de bureau puissantes et intuitives pour Windows, macOS et Linux adaptées à vos besoins métier.</p>
+          <div class="service-arrow">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== PORTFOLIO ========== -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Nos <span class="highlight">réalisations</span></h2>
+        <p class="section-subtitle">
+          Découvrez quelques-uns de nos projets phares qui illustrent notre expertise 
+          et notre capacité à livrer des solutions innovantes et de haute qualité.
+        </p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="portfolio-filters reveal">
+        <button class="pf-filter active" data-filter="all">Tous</button>
+        <button class="pf-filter" data-filter="ia">IA & Embarqué</button>
+        <button class="pf-filter" data-filter="mobile">Mobile</button>
+        <button class="pf-filter" data-filter="web">Web</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- Project 1 — Bassira -->
+        <div class="portfolio-card reveal reveal-delay-1" data-category="ia" id="project-bassira">
+          <div class="portfolio-image">
+            <img src="assets/bassira.png?v=2" alt="Bassira — Système de surveillance intelligent" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-category-badge">IA Embarquée</span>
+                <h3>Bassira</h3>
+                <p>Système de surveillance intelligent basé sur l'IA embarquée</p>
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('bassira')">
+                  Voir le projet
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="ptag">Intelligence Artificielle</span>
+              <span class="ptag">Systèmes Embarqués</span>
+              <span class="ptag">Sécurité</span>
+            </div>
+            <h3>Bassira</h3>
+            <p>Système de surveillance intelligent qui détecte et alerte en temps réel les tentatives de vol et d'intrusion grâce à l'IA embarquée.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 — Tijarti -->
+        <div class="portfolio-card reveal reveal-delay-2" data-category="mobile" id="project-tijarti">
+          <div class="portfolio-image">
+            <img src="assets/tijarti.png?v=2" alt="Tijarti — Application mobile ERP" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-category-badge">App Mobile</span>
+                <h3>Tijarti</h3>
+                <p>Application mobile ERP pour la gestion d'entreprise</p>
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('tijarti')">
+                  Voir le projet
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="ptag">Mobile</span>
+              <span class="ptag">ERP</span>
+              <span class="ptag">Gestion</span>
+            </div>
+            <h3>Tijarti</h3>
+            <p>Application mobile ERP complète pour la gestion commerciale : ventes, inventaire, facturation et analytiques en temps réel.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 — Sites Web -->
+        <div class="portfolio-card reveal reveal-delay-3" data-category="web" id="project-websites">
+          <div class="portfolio-image">
+            <img src="assets/websites.png" alt="Sites web réalisés par Wijha" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-category-badge">Développement Web</span>
+                <h3>Sites Web</h3>
+                <p>Collection de sites web modernes et performants</p>
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('websites')">
+                  Voir le projet
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="ptag">Web Design</span>
+              <span class="ptag">E-commerce</span>
+              <span class="ptag">Corporate</span>
+            </div>
+            <h3>Sites Web Réalisés</h3>
+            <p>Développement de sites vitrines, e-commerce et plateformes web sur mesure pour divers secteurs d'activité.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="project-modal" id="projectModal">
+    <div class="project-modal-backdrop" onclick="closeProjectModal()"></div>
+    <div class="project-modal-content">
+      <button class="project-modal-close" onclick="closeProjectModal()" aria-label="Fermer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="project-modal-image" id="modalImage"></div>
+      <div class="project-modal-body">
+        <span class="portfolio-category-badge" id="modalBadge"></span>
+        <h2 id="modalTitle"></h2>
+        <p class="project-modal-desc" id="modalDesc"></p>
+        <div class="project-modal-details">
+          <div class="pmd-item">
+            <h4>Technologies</h4>
+            <div class="pmd-tags" id="modalTechs"></div>
+          </div>
+          <div class="pmd-item">
+            <h4>Caractéristiques</h4>
+            <ul id="modalFeatures"></ul>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary" onclick="closeProjectModal()" style="margin-top:1.5rem">
+          Démarrer un projet similaire
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="glow-line" />
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-info reveal-left">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Parlons de votre <span class="highlight">prochain projet</span></h2>
+        <p class="section-subtitle">
+          Vous avez une idée, un besoin technique ou un projet en tête ? 
+          Contactez-nous et discutons ensemble de la meilleure solution pour vous.
+        </p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="cc-content">
+              <h4>Email</h4>
+              <p>contact@wijha.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="cc-content">
+              <h4>Téléphone</h4>
+              <p>+222 XX XX XX XX</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="cc-content">
+              <h4>Adresse</h4>
+              <p>Mauritanie</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" class="social-link" id="social-linkedin" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" id="social-github" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-link" id="social-twitter" aria-label="X / Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" id="social-instagram" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper reveal-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Prénom</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Votre prénom" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Nom</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Votre nom" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+222 XX XX XX XX" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service souhaité</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Sélectionnez un service</option>
+              <option value="web">Développement Web</option>
+              <option value="mobile">Applications Mobiles</option>
+              <option value="ia">Solutions IA</option>
+              <option value="embedded">Systèmes Embarqués</option>
+              <option value="data">Analyse de Données</option>
+              <option value="cahier">Cahier des Charges</option>
+              <option value="systems">Ingénierie Systèmes</option>
+              <option value="desktop">Applications Desktop</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              Envoyer le message
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line" />
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#accueil" class="nav-brand">
+            <img src="assets/logo-clean.png" alt="Wijha" style="height:38px" />
+            <span>Wijha</span>
+          </a>
+          <p>
+            Un groupe d'ingénieurs mauritaniens passionnés qui transforment vos idées en 
+            solutions digitales innovantes et performantes.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Développement Web</a></li>
+            <li><a href="#services">Applications Mobiles</a></li>
+            <li><a href="#services">Solutions IA</a></li>
+            <li><a href="#services">Systèmes Embarqués</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@wijha.com">contact@wijha.com</a></li>
+            <li><a href="tel:+222XXXXXXXX">+222 XX XX XX XX</a></li>
+            <li><a href="#">Mauritanie</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Wijha. Tous droits réservés.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ========== TOAST ========== -->
+  <div class="toast" id="toast">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span>Message envoyé avec succès !</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
