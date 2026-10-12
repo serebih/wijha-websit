@@ -8,6 +8,11 @@
   "assets": {
     "directory": "."
   },
+  // Le site répond sur le domaine nu et sur www.
+  "routes": [
+    { "pattern": "wijha-eng.com", "custom_domain": true },
+    { "pattern": "www.wijha-eng.com", "custom_domain": true }
+  ],
   "compatibility_flags": [
     "nodejs_compat"
   ]
