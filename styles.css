@@ -1948,3 +1948,30 @@ html[dir="rtl"] .cc-icon {
 @media (max-width: 768px) {
   .erp-stats { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Galerie de captures dans la fenêtre projet */
+.project-modal-gallery {
+  display: flex;
+  gap: .6rem;
+  padding: .9rem 2.5rem 0;
+  overflow-x: auto;
+}
+.pmg-thumb {
+  flex: 0 0 auto;
+  width: 96px;
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+  opacity: .6;
+  transition: opacity .2s, border-color .2s;
+}
+.pmg-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pmg-thumb:hover, .pmg-thumb.active { opacity: 1; border-color: #a855f7; }
+@media (max-width: 768px) {
+  .project-modal-gallery { padding: .8rem 1.25rem 0; }
+  .pmg-thumb { width: 72px; }
+}
