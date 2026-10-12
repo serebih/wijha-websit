@@ -402,12 +402,40 @@
       <!-- Filter tabs -->
       <div class="portfolio-filters reveal">
         <button class="pf-filter active" data-filter="all">Tous</button>
+        <button class="pf-filter" data-filter="erp">ERP</button>
         <button class="pf-filter" data-filter="ia">IA & Embarqué</button>
         <button class="pf-filter" data-filter="mobile">Mobile</button>
         <button class="pf-filter" data-filter="web">Web</button>
       </div>
 
       <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- Project 0 — WIJHA ERP -->
+        <div class="portfolio-card reveal" data-category="erp" id="project-erp">
+          <div class="portfolio-image">
+            <img src="assets/erp-cover.jpg" alt="WIJHA ERP — facture, discussion et contrôles d'intégrité" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-overlay-content">
+                <span class="portfolio-category-badge">Logiciel de gestion</span>
+                <h3>WIJHA ERP</h3>
+                <p>ERP intégré pour les entreprises mauritaniennes</p>
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('erp')">
+                  Voir le projet
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-tags">
+              <span class="ptag">ERP</span>
+              <span class="ptag">Comptabilité</span>
+              <span class="ptag">Stock</span>
+            </div>
+            <h3>WIJHA ERP</h3>
+            <p>Ventes, achats, stocks multi-hangars, trésorerie mobile money et comptabilité au plan mauritanien, dans un seul outil bilingue français / arabe.</p>
+          </div>
+        </div>
 
         <!-- Project 1 — Bassira -->
         <div class="portfolio-card reveal reveal-delay-1" data-category="ia" id="project-bassira">

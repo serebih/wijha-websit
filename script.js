@@ -443,6 +443,40 @@ document.addEventListener('DOMContentLoaded', () => {
    ============================================ */
 
 const projectData = {
+  erp: {
+    fr: {
+      title: 'WIJHA ERP',
+      badge: 'Logiciel de gestion',
+      image: 'assets/erp-cover.jpg',
+      gallery: ['assets/erp-controle.jpg', 'assets/erp-discussion.jpg', 'assets/erp-facture.jpg'],
+      desc: "WIJHA ERP est le système de gestion intégré conçu par Wijha pour les entreprises mauritaniennes. Ventes, achats, stocks multi-hangars, trésorerie multi-canaux (espèces, chèques, virements, Bankily, Masrvi, Sedad, BimBank) et comptabilité au plan comptable mauritanien sont réunis dans un seul outil bilingue. Chaque nuit, 19 contrôles d'intégrité vérifient les écritures, le stock et les sauvegardes ; le serveur peut fonctionner sur site, même sans internet.",
+      techs: ['Python', 'PostgreSQL', 'JavaScript', 'Docker', 'Application hors-ligne', 'IA (option)'],
+      features: [
+        'Ventes, achats et facturation bilingue français / arabe',
+        'Stock multi-hangars avec transferts et inventaires',
+        'Trésorerie multi-canaux dont 4 portefeuilles mobile money',
+        'Plan comptable mauritanien, TVA et liasse DGI',
+        "Droits par rôle, journal d'audit et 19 contrôles chaque nuit",
+        'Messagerie, appels et réunions vidéo intégrés'
+      ]
+    },
+    ar: {
+      title: 'WIJHA ERP',
+      badge: 'برنامج تسيير',
+      image: 'assets/erp-cover.jpg',
+      gallery: ['assets/erp-controle.jpg', 'assets/erp-discussion.jpg', 'assets/erp-facture.jpg'],
+      desc: 'WIJHA ERP هو نظام التسيير المتكامل الذي صممته "وجهة" للمؤسسات الموريتانية. يجمع في أداة واحدة بالعربية والفرنسية المبيعات والمشتريات والمخزون متعدد المستودعات والخزينة متعددة القنوات (نقدًا، شيكات، تحويلات، بنكيلي، مصرفي، السداد، بيم بنك) والمحاسبة وفق المخطط المحاسبي الموريتاني. كل ليلة، تتحقق 19 عملية فحص من سلامة القيود والمخزون والنسخ الاحتياطية، ويمكن تشغيل الخادم في مقر المؤسسة حتى دون إنترنت.',
+      techs: ['Python', 'PostgreSQL', 'JavaScript', 'Docker', 'تطبيق دون اتصال', 'ذكاء اصطناعي (اختياري)'],
+      features: [
+        'المبيعات والمشتريات وفواتير بالعربية والفرنسية',
+        'مخزون متعدد المستودعات مع التحويلات والجرد',
+        'خزينة متعددة القنوات منها 4 محافظ للدفع بالهاتف',
+        'المخطط المحاسبي الموريتاني، الضريبة على القيمة المضافة ونموذج المديرية العامة للضرائب',
+        'صلاحيات حسب الدور، سجل تدقيق و19 فحصًا كل ليلة',
+        'مراسلة ومكالمات واجتماعات مرئية مدمجة'
+      ]
+    }
+  },
   bassira: {
     fr: {
       title: 'Bassira',
@@ -555,6 +589,26 @@ function openProjectModal(projectId) {
   const modalFeatures = document.getElementById('modalFeatures');
 
   modalImage.innerHTML = '<img src="' + data.image + '" alt="' + data.title + '" />';
+  const oldGallery = document.getElementById('modalGallery');
+  if (oldGallery) oldGallery.remove();
+  if (data.gallery) {
+    const gallery = document.createElement('div');
+    gallery.id = 'modalGallery';
+    gallery.className = 'project-modal-gallery';
+    [data.image].concat(data.gallery).forEach(function(src, i) {
+      const thumb = document.createElement('button');
+      thumb.type = 'button';
+      thumb.className = 'pmg-thumb' + (i === 0 ? ' active' : '');
+      thumb.innerHTML = '<img src="' + src + '" alt="" />';
+      thumb.addEventListener('click', function() {
+        modalImage.querySelector('img').src = src;
+        gallery.querySelectorAll('.pmg-thumb').forEach(function(t) { t.classList.remove('active'); });
+        thumb.classList.add('active');
+      });
+      gallery.appendChild(thumb);
+    });
+    modalImage.after(gallery);
+  }
   modalBadge.textContent = data.badge;
   modalTitle.textContent = data.title;
   modalDesc.textContent = data.desc;
